@@ -1,0 +1,51 @@
+:root{
+    --white: #fff;
+    --main-blue: #0088FF;
+    --border: 2px solid black;
+    --border-radius: 5px;
+    --secondary : #FFB115;
+}
+
+.blog-item{
+   padding: 30px 20px ;
+   background-color: var(--white);
+   
+   color: #000;
+}
+.blog-item-two{
+    background-color: var(--main-blue);
+    color: var(--white);
+}
+
+.blog-item p{
+    color: #000;
+}
+
+.blog-item-two p{
+    color: var(--white);
+
+}
+
+
+
+
+.blog-item h3{
+    font-weight: 600;
+}
+
+
+.tags{
+    margin-top: 15px;
+    
+}
+
+.blog-item button{
+    font-family: Poppins;
+    padding: 5px 10px;
+    background-color: #fff;
+    color: var(--main-blue);
+    border: 1px solid black;
+    border-radius: var(--border-radius);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+    margin-right: 15px;
+}
