@@ -18,7 +18,7 @@ body{
 }
 
 .content{
-    padding-inline: 200px;
+    padding-inline: clamp(2vw, 10vw ,200px)
     
 }
 
@@ -27,6 +27,7 @@ header{
 }
 
 .navbar{
+    
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
@@ -41,7 +42,7 @@ header{
 
  
 }
-
+.navlinks .menu{display: none;}
 .navlinks li a{
     text-decoration: none;
     color: var(--white);
@@ -64,19 +65,18 @@ header{
 /*LANDING PAGE*/
 
 .landing{
+   
     background-color: var(--main-blue);
-    height: 90vh;
+    /* height: 90vh; */
     display: flex;
     justify-content: center;
     align-items: center;
-    
-   
-
 
 }
 .landing .content{
-   
+   height: 100%;
    width: 100%;
+ 
 }
 
 .landing-text-and-image{
@@ -94,10 +94,11 @@ header{
 }
 
 .landing-text h1{
-    font-size: 82px;
+    font-size: clamp(2rem, 3rem  , 6rem)
 }
 .landing-text-and-image img{
-    width: 30%;
+    width: clamp(30%,50%,230px);
+    margin-top: 20px;
 }
 
 .landing-description{
@@ -111,8 +112,6 @@ header{
 
 .portfolio{
     padding-top: 50px;
-    height: 90vh;
-  
    
 }
 
@@ -126,6 +125,7 @@ header{
 
 .portfolio .container{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -141,18 +141,18 @@ header{
     display: flex;
     justify-content: space-between;
     height: 100%;
-   
     width: 100%;
 }
 
 .portfolio-item{
+    padding: clamp(20px,4vw,50px) 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    gap: 10px;
-    width: 25%;
-    height: 80%;
+    justify-content: space-between;
+    gap: 20px;
+    flex: 0 0 24%;  
+   
     border: var(--border);
     border-radius: var(--border-radius);
     box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
@@ -222,12 +222,15 @@ header{
     width: 80%;
     color: var(--white);
     margin-bottom: 50px;
-    box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+
     
 }
 
 .blog-item h3{
     font-weight: 500;
+   
+    
 }
 
 .blog-item p{
@@ -241,10 +244,10 @@ header{
     
 
 }
-/* .blog-item-two{
+.blog-item-two{
     background-color: var(--white);
     color: #0088FF;
-} */
+} 
 .blog-item-two p{
     color: var(--main-blue);
 }
@@ -266,7 +269,7 @@ footer .container{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 40px ;
+    padding-top: clamp(20px, 4vh, 40px) ;
     color: var(--white);
 }
 
@@ -283,4 +286,60 @@ footer .container .icons i{
     font-size: 30px;
     color: var(--white);
     
+}
+
+
+@media (max-width: 900px) {
+    /* Smaller font for mobile devices */
+    .content{
+        padding: clamp(1rem, 4vw, 2rem); 
+    }
+    .navlinks .menu{
+        display: block;
+       
+    }
+    .navlinks li{
+         display: none;
+    }
+    .landing-text-and-image{
+        text-align: center;
+        flex-direction: column;
+    }
+    .portfolio-container{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+ .portfolio-item{
+    flex: 0 0 auto; 
+    width: 80%;     
+ }
+
+ .blog-item{
+    width: 95%;
+ }
+ 
+.blog-item h3{
+    font-size: 1rem;   
+}
+
+
+.blog-item p{
+    font-size: .7rem; 
+
+}
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+     .portfolio-container{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+ .portfolio-item{
+    flex: 0 0 auto; 
+    width: 70%;     
+ }
 }
