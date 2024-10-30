@@ -1,53 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}" />
     {% if page.title == 'Blog' %}
-    <link rel="stylesheet" href="{{ '/blog.css' | relative_url }}">
-{% endif %}
+    <link rel="stylesheet" href="{{ '/blog.css' | relative_url }}" />
+    {% endif %}
 
-
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Samantha's Website</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <header>
-        <div class="content">
-            <div class="navbar">
-                <div class="logo">LOGO</div>
-                <ul class="navlinks">
-                   <li><a href="index.html">Home</a></li>
-                    <li><a href="#home">About</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li ><a href="#home" class="resume"> Resume</a></li>
-                    <i class="fa-solid fa-bars menu"></i>
-                </ul>
-            </div>
+      <div class="content">
+        <div class="navbar navbar-big">
+          <div class="logo">LOGO</div>
+          <ul class="navlinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#home">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#home" class="resume"> Resume</a></li>
+          </ul>
         </div>
+
+        <div class="navbar navbar-small">
+          <div class="logo-and-menu">
+            <div class="logo">LOGO</div>
+            <i class="fa-solid fa-bars menu"></i>
+          </div>
+
+          <ul class="navlinks">
+            <div>
+              <li><a href="index.html">Home</a></li>
+            </div>
+            <div>
+              <li><a href="#home">About</a></li>
+            </div>
+            <div>
+              <li><a href="blog.html">Blog</a></li>
+            </div>
+            <div>
+              <li><a href="#home"> Resume</a></li>
+            </div>
+          </ul>
+        </div>
+      </div>
     </header>
-    
-    <main>
-        {{ content }}
-    </main>
+
+    <main>{{ content }}</main>
 
     <footer>
-        <div class="content">
-            <div class="container">
-                <div class="icons">
-                    <a href=""> <i class="fa-brands fa-linkedin"></i></a>
-                    <a href=""> <i class="fa-brands fa-square-github"></i></a>
-                    <a href=""> <i class="fa-brands fa-square-twitter"></i></a>
-                </div>
+      <div class="content">
+        <div class="container">
+          <div class="icons">
+            <a href=""> <i class="fa-brands fa-linkedin"></i></a>
+            <a href=""> <i class="fa-brands fa-square-github"></i></a>
+            <a href=""> <i class="fa-brands fa-square-twitter"></i></a>
+          </div>
 
-                <p>© 2024 Samantha Ghartey</p>
-            </div>
+          <p>© 2024 Samantha Ghartey</p>
         </div>
+      </div>
     </footer>
 
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

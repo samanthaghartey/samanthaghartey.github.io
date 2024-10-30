@@ -4,6 +4,7 @@
     --border: 2px solid black;
     --border-radius: 5px;
     --secondary : #FFB115;
+    --drop-shadow : 2px 2px 0px rgba(0, 0, 0, 1);
 }
 
 *{
@@ -32,17 +33,14 @@ header{
     display: flex;
     justify-content: space-between;
 
-   
-   
 }
 
 .navlinks{
     list-style-type: none; 
     display: flex;   
-
  
 }
-.navlinks .menu{display: none;}
+.menu{display: none; cursor: pointer; color: var(--main-blue);}
 .navlinks li a{
     text-decoration: none;
     color: var(--white);
@@ -59,6 +57,53 @@ header{
     font-weight: 500;
 }
 
+/*MOBILE NAVBAR*/
+
+.navbar-small{
+
+   display: none; 
+    flex-direction: column;
+    background-color: var(--white);
+    border: var(--border);
+    box-shadow: var(--drop-shadow);
+    border-radius: var(--border-radius);
+    padding: 0;  
+}
+.navbar-small .navlinks{
+    flex-direction: column;
+     margin-top: 5px;
+
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+/* .navbar-small i{
+    color: var(--main-blue);
+} */
+.navbar-small .navlinks li a{
+
+    color: black;
+    font-weight: 500;
+    
+}
+.navbar-small .navlinks div{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar-small .navlinks div:nth-of-type(1), .navbar-small .navlinks div:nth-of-type(2),.navbar-small .navlinks div:nth-of-type(3), .navbar-small .navlinks div:nth-of-type(4) {
+    border-top: var(--border);
+}
+
+.logo-and-menu{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
 
 
 
@@ -294,17 +339,27 @@ footer .container .icons i{
     .content{
         padding: clamp(1rem, 4vw, 2rem); 
     }
-    .navlinks .menu{
-        display: block;
-       
+
+    /*NAVBAR*/
+  
+    .navbar-big{
+        display: none;
     }
-    .navlinks li{
+    .navbar-small{
+        display: flex;
+    }
+
+  .navbar-small .navlinks{
          display: none;
-    }
+    } 
+ 
+    /*LANDING*/ 
     .landing-text-and-image{
         text-align: center;
         flex-direction: column;
     }
+
+    /*PORTFOLIO*/
     .portfolio-container{
         flex-direction: column;
         justify-content: space-between;
@@ -315,6 +370,8 @@ footer .container .icons i{
     flex: 0 0 auto; 
     width: 80%;     
  }
+
+ /*BLOG*/
 
  .blog-item{
     width: 95%;
@@ -331,6 +388,7 @@ footer .container .icons i{
 }
 }
 
+/*TABLET SIZE*/
 @media (min-width: 900px) and (max-width: 1200px) {
      .portfolio-container{
         flex-direction: column;
