@@ -306,7 +306,13 @@ footer .container .icons i {
   color: var(--white);
 }
 
-/* GENERAL*/
+/* RESUME*/
+
+iframe {
+  width: 80%; /* adjust as needed */
+  height: 90%; /* adjust as needed */
+  border: none; /* optional border style */
+}
 
 /* MEDIA QUERY*/
 
