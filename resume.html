@@ -1,3 +1,48 @@
-<body>
-  <iframe src="images/Blog Post.pdf" title="My Resume"></iframe>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Resume</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%; /* Full height */
+        overflow: hidden; /* Prevent scrolling */
+      }
+      .pdf-container {
+        width: 100%; /* Full viewport width */
+        height: 100%; /* Full viewport height */
+        display: flex; /* Use flexbox for alignment */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+      }
+      iframe {
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        border: none; /* No border */
+        /* The next lines ensure it scales nicely */
+        max-width: none; /* Prevent max-width from being set */
+        max-height: none; /* Prevent max-height from being set */
+        object-fit: contain; /* Scale the PDF to fit while maintaining aspect ratio */
+      }
+
+      @media (max-width: 768px) {
+        /* For mobile devices */
+        .pdf-container {
+          transform: scale(0.8); /* Adjust the scaling for mobile */
+          transform-origin: top left; /* Scale from the top left */
+          width: 125%; /* Adjust width to maintain centering */
+          height: 125%; /* Adjust height to maintain centering */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pdf-container">
+      <iframe src="images/Blog Post.pdf#zoom=33" title="My Resume"></iframe>
+    </div>
+  </body>
+</html>

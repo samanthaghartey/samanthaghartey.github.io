@@ -307,13 +307,18 @@ footer .container .icons i {
 }
 
 /* RESUME*/
-
-iframe {
-  width: 80%; /* adjust as needed */
-  height: 90%; /* adjust as needed */
-  border: none; /* optional border style */
+/*.resume-body {
+  margin: 0;
+  padding: 0;
+  height: 100%; 
+  overflow: hidden;
 }
-
+iframe {
+  width: 100%; 
+  height: 100%; 
+  border: none; 
+}
+*/
 /* MEDIA QUERY*/
 
 @media (max-width: 900px) {
