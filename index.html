@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Samantha
 ---
 
 <!--Landing page-->
@@ -22,7 +23,7 @@ layout: default
   </div>
 </section>
 
-<section class="portfolio">
+<section class="portfolio" id="portfolio">
   <div class="content">
     <div class="container">
       <h1>MY PORTFOLIO</h1>
@@ -64,24 +65,25 @@ layout: default
           MY BLOG</a
         >
       </h1>
-      <p>Brain Dump :)</p>
-      <p style="margin-bottom: 40px">On my blog yada yada yada</p>
+      <p style="margin-bottom: 40px">Brain Dump :)</p>
+      <!-- <p style="margin-bottom: 40px">On my blog yada yada yada</p> -->
 
       <div class="blog-container">
-        <div class="blog-item blog-item-one">
-          <h3>Title : Lorem ipsum dolor amnet telia opota</h3>
-          <p>Aug 23, 2024</p>
-        </div>
+        {% assign blog_posts = site.posts | where: "category" , "blog" | limit:3
+        %} {% for post in blog_posts%}
+        <div class="blog-item">
+          <h3>
+            <a
+              href="{{post.url}}"
+              style="text-decoration: none; color: inherit"
+            >
+              Title : {{post.title}}</a
+            >
+          </h3>
 
-        <div class="blog-item blog-item-two">
-          <h3>Title : Lorem ipsum dolor amnet telia opota</h3>
-          <p>Aug 23, 2024</p>
+          <p>{{post.date | date: "%B %d, %Y"}}</p>
         </div>
-
-        <div class="blog-item blog-item-three">
-          <h3>Title : Lorem ipsum dolor amnet telia opota</h3>
-          <p>Aug 23, 2024</p>
-        </div>
+        {% endfor %}
 
         <button class="view-more">
           <a href="blog.html" style="text-decoration: none; color: inherit"

@@ -1,0 +1,57 @@
+---
+layout: default
+title: Blog Post
+---
+
+<style>
+  .title {
+    text-align: center;
+  }
+
+  .post-container {
+    margin-top: 50px;
+  
+    padding-inline: clamp(2vw, 20vw, 250px); 
+  }
+
+  .post-content {
+    margin-top: 20px;
+    line-height: 2rem;
+  }
+
+  .post-meta {
+    opacity: 0.8;
+    font-size: 0.7rem;
+  }
+
+  @media (max-width : 900px) {
+    .post-container {
+    margin-top: 50px;
+    padding-inline: clamp(2vw, 10vw, 200px);
+  }
+    
+  }
+  
+
+</style>
+{% for post in site.posts %}
+{% if post.category == "blog" %}
+
+<div class="content post-container">
+  <h1 class="title">{{page.title}}</h1>
+  <div class="post-meta">
+    <p>Published on {{page.date | date: "%B %d, %Y"}}</p>
+  
+  </div>
+
+  <div class="post-content">{{content}}</div>
+
+  <div class="tags">
+    {% if page.tags %} {% for tag in page.tags %}
+    <button>{{tag}}</button>
+    {% endfor %} {% endif %}
+  </div>
+</div>
+</div>
+{% endif %}
+{% endfor %}
