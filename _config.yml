@@ -25,22 +25,20 @@ description: >- # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 
+url: "https://codegummy.github.io" # Your GitHub username samanthaghartey.github.io
 
-url: "https://codegummy.github.io"  # Your GitHub username
-baseurl: "" 
+baseurl: "/samanthaghartey"
 
 twitter_username: jekyllrb
-github_username:  jekyll
+github_username: jekyll
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
-
 #collections:
-  #posts:
-    #output: true
-
+#posts:
+#output: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
