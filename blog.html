@@ -25,9 +25,13 @@ title: Blog
       </p>
 
       <div class="blog-container general-container">
-        {% for post in site.posts %}
+        {% assign blogposts = site.posts | where : "category" , "blog" %} {% for
+        post in blogposts %}
 
-        <div class="general-item blog-item blog-item-one">
+        <div
+          class="general-item blog-item blog-item-one blog-post"
+          data-url="{{ post.url }}"
+        >
           <a href=" {{post.url}}" style="text-decoration: none">
             <h3>{{post.title}}</h3>
           </a>

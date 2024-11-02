@@ -50,6 +50,7 @@
 
 .general-item p {
   color: #000;
+  font-size: 0.8rem;
 }
 
 .general-item-two p {
@@ -98,7 +99,7 @@
 }
 
 .text-and-tags {
-  width: 50%;
+  flex: 1;
 }
 
 .text-and-tags p {
@@ -107,7 +108,7 @@
 /* MEDIA QUERY*/
 
 @media (max-width: 900px) {
-  .text-and-tags {
+  .general-item img {
     width: 100%;
   }
 }
