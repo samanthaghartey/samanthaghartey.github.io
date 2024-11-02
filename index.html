@@ -61,7 +61,10 @@ title: Samantha
   <div class="content">
     <div class="container">
       <h1>
-        <a href="blog.html" style="text-decoration: none; color: inherit">
+        <a
+          href="{{ '/blog' | relative_url }}"
+          style="text-decoration: none; color: inherit"
+        >
           MY BLOG</a
         >
       </h1>
@@ -71,10 +74,13 @@ title: Samantha
       <div class="blog-container">
         {% assign blog_posts = site.posts | where: "category" , "blog" | limit:3
         %} {% for post in blog_posts%}
-        <div class="blog-item blog-post" data-url="{{post.url}}">
+        <div
+          class="blog-item blog-post"
+          data-url="{{ post.url | relative_url }}"
+        >
           <h3>
             <a
-              href="{{post.url}}"
+              href="{{ post.url | relative_url }}"
               style="text-decoration: none; color: inherit"
             >
               Title : {{post.title}}</a
@@ -86,7 +92,9 @@ title: Samantha
         {% endfor %}
 
         <button class="view-more">
-          <a href="blog.html" style="text-decoration: none; color: inherit"
+          <a
+            href="{{ '/blog' | relative_url }}"
+            style="text-decoration: none; color: inherit"
             >View More</a
           >
         </button>
