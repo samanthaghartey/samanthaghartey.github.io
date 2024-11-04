@@ -49,6 +49,7 @@ header {
   cursor: pointer;
   color: var(--main-blue);
 }
+
 .navlinks li a {
   text-decoration: none;
   color: var(--white);
@@ -114,6 +115,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.logo {
+  cursor: pointer;
 }
 
 /*LANDING PAGE*/

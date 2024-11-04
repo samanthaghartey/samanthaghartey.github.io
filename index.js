@@ -3,6 +3,7 @@ const typingTextElement = document.querySelector(".typing-text");
 const menu = document.querySelector(".menu");
 const navbar = document.querySelector(".navbar-small .navlinks");
 const blogpost = document.querySelectorAll(".blog-post");
+const logo = document.querySelectorAll(".logo");
 
 let wordIndex = 0;
 let letterIndex = 0;
