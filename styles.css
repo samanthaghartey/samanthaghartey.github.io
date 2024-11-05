@@ -274,7 +274,8 @@ header {
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
-.blog-item:hover {
+.blog-item:hover,
+.blog-post:hover {
   background-color: var(--main-blue);
   color: var(--white);
   transform: scale(1.05);
@@ -373,11 +374,11 @@ footer .container .icons i {
   }
 
   .blog-item h3 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .blog-item p {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
   }
 }
 

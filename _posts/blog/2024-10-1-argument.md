@@ -1,7 +1,7 @@
 ---
 layout: blog_post
 title: "An Argument I Had..."
-date: 2024-10-31
+date: 2024-05-07
 tags: [personal, relationships]
 excerpt: "I just wanted to write a bit about it yk"
 category: blog

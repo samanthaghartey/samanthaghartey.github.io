@@ -43,20 +43,18 @@
   margin-bottom: 50px;
   box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
 }
-.general-item-two {
-  background-color: var(--main-blue);
-  color: var(--white);
-}
-
 .general-item p {
   color: #000;
   font-size: 0.8rem;
 }
 
-.general-item-two p {
+.blog-post:hover {
+  background-color: var(--main-blue);
+}
+.blog-post:hover p,
+.blog-post:hover h3 {
   color: var(--white);
 }
-
 .general-item h3 {
   font-weight: 600;
   color: #000;
@@ -85,6 +83,9 @@
   border-radius: var(--border-radius);
   box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
   margin-right: 15px;
+}
+.tags button {
+  box-shadow: 0.5px 0.5px 0px rgba(0, 0, 0, 1);
 }
 
 .general-item img {

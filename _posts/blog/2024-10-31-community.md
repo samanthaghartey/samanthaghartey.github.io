@@ -2,7 +2,7 @@
 layout: blog_post
 title: "The sense of Community"
 date: 2024-10-31
-tags: [example, jekyll, blog]
+tags: [community, self-development]
 excerpt: "What is community, a discussion"
 category: blog
 ---
