@@ -3,6 +3,7 @@ const typingTextElement = document.querySelector(".typing-text");
 const menu = document.querySelector(".menu");
 const navbar = document.querySelector(".navbar-small .navlinks");
 const blogpost = document.querySelectorAll(".blog-post");
+const general_Item = document.querySelectorAll(".general-item");
 const logo = document.querySelectorAll(".logo");
 
 let wordIndex = 0;
@@ -45,5 +46,14 @@ blogpost.forEach((post) => {
   post.addEventListener("click", () => {
     const url = post.getAttribute("data-url");
     window.location.href = url;
+  });
+});
+
+general_Item.forEach((item) => {
+  item.addEventListener("click", () => {
+    if (item.getAttribute("data-url")) {
+      const url = item.getAttribute("data-url");
+      window.location.href = url;
+    }
   });
 });

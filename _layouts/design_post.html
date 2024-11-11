@@ -1,0 +1,99 @@
+---
+layout: default
+title: Design Post
+---
+
+<style>
+  .title,
+  .description {
+    text-align: center;
+  }
+
+  .description {
+    margin-bottom: 40px;
+  }
+
+  .post-container {
+    margin-top: 50px;
+    padding-inline: clamp(2vw, 20vw, 250px);
+  }
+
+  .post-content {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .post-content section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  .post-content section .text {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .post-content section p {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .images img {
+    height: 80vh;
+    border-radius: 8px;
+    border-radius: 8px;
+    border: 0.1px solid #002d54;
+  }
+
+  @media (max-width: 900px) {
+    .post-container {
+      margin-top: 40px;
+      padding-inline: clamp(2vw, 10vw, 200px);
+    }
+
+    .images {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .images img {
+      width: 100%;
+      height: auto;
+    }
+  }
+</style>
+
+<div class="content post-container">
+  <h1 class="title">{{page.title}}</h1>
+  <div class="description">{{page.outline}}</div>
+
+  <div class="post-content">
+    {%for section in page.sections%}
+    <section>
+      <div class="text">
+        <h3>{{section.title}}</h3>
+
+        <p>{{section.content.paragraph}}</p>
+      </div>
+
+      <div class="images">
+        {%for image in section.content.images%}
+        <img src="{{image}} " alt="" />
+        {%endfor%}
+      </div>
+    </section>
+    {%endfor%}
+  </div>
+</div>
