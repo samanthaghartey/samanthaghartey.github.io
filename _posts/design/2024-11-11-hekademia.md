@@ -1,6 +1,6 @@
 ---
 layout: design_post
-title: "Gobaith"
+title: "Hekademia"
 date: 2024-11-11
 tags: [LOGO DESIGN, BRANDING]
 category: design
@@ -11,7 +11,7 @@ outline : "An Instagram branding project for Hekademia. I designed a logo and  a
 sections:
     - title : "Logo Design"
       content : 
-        paragraph : "The logo is an abstract iameg of an ibis. In ancient Egypt, the ibis held significant symbolic meaning, primarily associated with wisdom, knowledge, and writing. The sacred ibis, with its distinctive curved beak and long legs, was often linked to Thoth, the Egyptian god of wisdom, writing, science, and judgment.  This connection gave the bird a sacred status, particularly in the context of intellectual and spiritual pursuits."
+        paragraph : "The logo is an abstract image of an ibis. In ancient Egypt, the ibis held significant symbolic meaning, primarily associated with wisdom, knowledge, and writing. The sacred ibis, with its distinctive curved beak and long legs, was often linked to Thoth, the Egyptian god of wisdom, writing, science, and judgment.  This connection gave the bird a sacred status, especially in  intellectual and spiritual pursuits."
         images :
         - "/images/hekademia-logo.png"
 

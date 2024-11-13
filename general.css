@@ -121,9 +121,15 @@
   .general-item img {
     width: 100%;
   }
+  .general-item .text-and-image {
+    flex-direction: column;
+  }
 }
 @media (min-width: 768px) and (max-width: 1920px) {
   .general-item .text-and-image {
     flex-direction: row;
+  }
+  .general-item img {
+    width: 50%;
   }
 }
