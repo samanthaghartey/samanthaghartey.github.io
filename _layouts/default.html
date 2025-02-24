@@ -18,7 +18,7 @@
     />
     <title>Samantha's Website</title>
   </head>
-  <body>
+  <body class="{%if page.theme == 'dark' %}dark-mode{%endif%}">
     <header>
       <div class="content">
         <div class="navbar navbar-big">
@@ -35,6 +35,9 @@
               >
             </li>
           </ul>
+          <button class="toggle-theme">
+            <span id="theme-icon">🌞</span>
+          </button>
         </div>
 
         <div class="navbar navbar-small">
@@ -43,7 +46,12 @@
               ><img class="logo" src="/images/logoblue.svg" alt="" width="80px"
             /></a>
 
-            <i class="fa-solid fa-bars menu"></i>
+            <div class="">
+              <i class="fa-solid fa-bars menu"></i>
+              <button class="toggle-theme">
+                <span id="theme-icon">🌞</span>
+              </button>
+            </div>
           </div>
 
           <ul class="navlinks">

@@ -1,19 +1,41 @@
 :root {
-  --white: #fff;
+  --bg-color: #fff;
   --main-blue: #0088ff;
   --light-blue: #d4ebff;
   --border: 2px solid black;
   --border-radius: 5px;
   --secondary: #ffb115;
   --drop-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+  --text-color: #121212;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.toggle-theme {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.toggle-theme:hover {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .general {
   margin-top: 50px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .general .content {
   height: 100%;
+  background-color: var(--bg-color);
 }
 
 .general .container {
@@ -22,6 +44,7 @@
   align-items: center;
   flex-direction: column;
   height: 100%;
+  background-color: var(--bg-color);
 }
 
 .general-container {
@@ -31,22 +54,23 @@
   flex-direction: column;
   width: 100%;
   padding: 20px 0;
+  background-color: var(--bg-color);
 }
 
 .general-item {
   gap: 20px;
-  background-color: var(--white);
+  background-color: var(--bg-color);
   border: var(--border);
   border-radius: var(--border-radius);
   padding: 30px 20px;
   width: 80%;
-  color: var(--white);
+  color: var(--text-color);
   margin-bottom: 50px;
   box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 .general-item p {
-  color: #000;
+  color: var(--text-color);
   font-size: 0.8rem;
 }
 
@@ -56,7 +80,7 @@
 }
 .blog-post:hover p,
 .blog-post:hover h3 {
-  color: var(--white);
+  color: var(--text-color);
 }
 
 .general-hover:hover {
@@ -65,7 +89,7 @@
 }
 .general-item h3 {
   font-weight: 600;
-  color: #000;
+  color: var(--text-color);
 }
 
 .tags {
@@ -131,5 +155,12 @@
   }
   .general-item img {
     width: 50%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #121212;
+    --text-color: #ffffff;
   }
 }

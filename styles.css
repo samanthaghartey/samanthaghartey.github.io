@@ -1,13 +1,18 @@
 :root {
-  --white: #fff;
+  --bg-color: #fff;
   --main-blue: #2d9cfd;
   --border: 2px solid black;
   --border-radius: 5px;
   --secondary: #ffb115;
   --drop-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
   --black: #000;
+  --text-color: #ffffff;
 }
 
+.dark-mode {
+  background-color: #0088ff;
+  color: #fff;
+}
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +24,8 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 main {
   flex: 1;
@@ -52,7 +59,7 @@ header {
 
 .navlinks li a {
   text-decoration: none;
-  color: var(--white);
+  color: var(--bg-color);
   margin-right: 50px;
 }
 
@@ -61,9 +68,23 @@ header {
   box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
   padding: 5px 20px;
   border-radius: var(--border-radius);
-  background-color: var(--white);
+  background-color: var(--bg-color);
   color: var(--main-blue);
   font-weight: 500;
+}
+
+.toggle-theme {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.toggle-theme:hover {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 /*MOBILE NAVBAR*/
@@ -71,7 +92,7 @@ header {
 .navbar-small {
   display: none;
   flex-direction: column;
-  background-color: var(--white);
+  background-color: var(--bg-color);
   border: var(--border);
   box-shadow: var(--drop-shadow);
   border-radius: var(--border-radius);
@@ -80,16 +101,12 @@ header {
 .navbar-small .navlinks {
   flex-direction: column;
   margin-top: 5px;
-
   align-items: center;
   justify-content: center;
 }
 
-/* .navbar-small i{
-    color: var(--main-blue);
-} */
 .navbar-small .navlinks li a {
-  color: black;
+  color: var(--text-color);
   font-weight: 500;
   display: block;
   padding: 10px 0;
@@ -139,7 +156,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  color: var(--white);
+  color: var(--bg-color);
 }
 
 .landing-text {
@@ -226,11 +243,11 @@ header {
 .portfolio-item-one button,
 .portfolio-item-three button {
   background-color: var(--secondary);
-  color: var(--white);
+  color: var(--text-color);
 }
 .portfolio-item-two button {
   background-color: var(--main-blue);
-  color: var(--white);
+  color: var(--text-color);
 }
 
 /*BLOG*/
@@ -263,12 +280,12 @@ header {
 
 .blog-item {
   cursor: pointer;
-  background-color: var(--white);
+  background-color: var(--bg-color);
   border: var(--border);
   border-radius: var(--border-radius);
   padding: 10px 20px;
   width: 80%;
-  color: var(--black);
+  color: var(--text-color);
   margin-bottom: 50px;
   box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
@@ -277,7 +294,7 @@ header {
 .blog-item:hover,
 .blog-post:hover {
   background-color: var(--main-blue);
-  color: var(--white);
+  color: var(--bg-color);
   transform: scale(1.05);
 }
 
@@ -292,7 +309,7 @@ header {
 
 .blog .view-more {
   background-color: var(--main-blue);
-  color: var(--white);
+  color: var(--bg-color);
 }
 
 /*FOOTER*/
@@ -313,7 +330,7 @@ footer .container {
   justify-content: center;
   align-items: center;
   padding-top: clamp(20px, 4vh, 40px);
-  color: var(--white);
+  color: var(--bg-color);
 }
 
 footer .container .icons {
@@ -325,7 +342,7 @@ footer .container .icons {
 }
 footer .container .icons i {
   font-size: 30px;
-  color: var(--white);
+  color: var(--bg-color);
 }
 
 /* MEDIA QUERY*/
@@ -393,5 +410,12 @@ footer .container .icons i {
   .portfolio-item {
     flex: 0 0 auto;
     width: 70%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #121212;
+    --text-color: #ffffff;
   }
 }
